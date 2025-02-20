@@ -112,5 +112,5 @@ Working FDT set to 88000000
 Starting kernel ...
 
 123Hello NuttX!
-1%       
+1      
 ```
