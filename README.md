@@ -112,5 +112,14 @@ Working FDT set to 88000000
 Starting kernel ...
 
 123Hello NuttX!
-1      
+00ABCnx_start: Entry
+uart_register: Registering /dev/console
+uart_register: Registering /dev/ttyS0
+work_start_lowpri: Starting low-priority kernel worker thread(s)
+nxtask_activate: lpwork pid=1,TCB=0x80408738
+nxtask_activate: AppBringUp pid=2,TCB=0x804088c8
+nx_start_application: Starting init task: /system/bin/init
+nxtask_activate: /system/bin/init pid=3,TCB=0x80409b58
+nxtask_exit: AppBringUp pid=2,TCB=0x804088c8
+nx_start: CPU0: Beginning Idle Loop
 ```
