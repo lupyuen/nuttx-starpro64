@@ -226,3 +226,29 @@ We need to fix the PLIC Driver in NuttX, which only works on Hart 0...
    [CPU0] nx_start: CPU0: Beginning Idle Loop
    [ Stuck here ]
    ```
+
+Here's the fix, we support only One Hart right now (the Boot Hart)...
+
+- [Enable ARCH_RV_CPUID_MAP](https://github.com/lupyuen2/wip-nuttx/commit/87ffd016bb252ca0f7c2abe410ddaa03fc993f27)
+
+- [Fix PLIC for Multiple Harts](https://github.com/lupyuen2/wip-nuttx/commit/5b9dc421b2fa73d9e1e0a92a152ae1497ea178f4)
+
+# Stuck at Semaphore
+
+Now OSTest is stuck at Semaphore. Maybe it's waiting for a Hart that hasn't booted?
+
+[waiter_func: Thread 2 waiting on semaphore](https://gist.github.com/lupyuen/5553ee833440ceb3e2a85cdb5515ed65)
+
+```text
+nsh> ostest
+user_main: semaphore test
+sem_test: Initializing semaphore to 0
+sem_test: Starting waiter thread 1
+sem_test: Set thread 1 priority to 191
+sem_test: Starting waiter thread 2
+sem_test: Set thread 2 priority to 128
+waiter_func: Thread 2 Started
+waiter_func: Thread 2 initial semaphore value = 0
+waiter_func: Thread 2 waiting on semaphore
+[ Stuck here ]
+```
