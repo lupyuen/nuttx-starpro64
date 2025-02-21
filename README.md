@@ -1,5 +1,7 @@
 # Apache NuttX RTOS on StarPro64 RISC-V SBC (ESWIN EIC7700X)
 
+[__Watch the Demo on YouTube__](https://youtu.be/70DQ4YlQMMw)
+
 Work in progress...
 
 ```bash
@@ -233,6 +235,12 @@ Here's the fix, we support only One Hart right now (the Boot Hart)...
 
 - [Fix PLIC for Multiple Harts](https://github.com/lupyuen2/wip-nuttx/commit/5b9dc421b2fa73d9e1e0a92a152ae1497ea178f4)
 
+And it boots!
+
+[__Watch the Demo on YouTube__](https://youtu.be/70DQ4YlQMMw)
+
+[__See the NuttX Log__](https://gist.github.com/lupyuen/901365650d8f908a7caa431de4e84ff6)
+
 # Stuck at Semaphore
 
 Now OSTest is stuck at Semaphore. Maybe it's waiting for a Hart that hasn't booted?
@@ -252,3 +260,7 @@ waiter_func: Thread 2 initial semaphore value = 0
 waiter_func: Thread 2 waiting on semaphore
 [ Stuck here ]
 ```
+
+[__Watch the Demo on YouTube__](https://youtu.be/70DQ4YlQMMw)
+
+[__See the NuttX Log__](https://gist.github.com/lupyuen/901365650d8f908a7caa431de4e84ff6)
