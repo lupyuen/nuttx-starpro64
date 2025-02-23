@@ -1,6 +1,6 @@
 # Apache NuttX RTOS on StarPro64 RISC-V SBC (ESWIN EIC7700X)
 
-[__Watch the Demo on YouTube__](https://youtu.be/70DQ4YlQMMw)
+[__Watch the Demo on YouTube__](https://youtu.be/Yr7aYNIMUsw)
 
 Work in progress...
 
@@ -264,3 +264,15 @@ waiter_func: Thread 2 waiting on semaphore
 [__Watch the Demo on YouTube__](https://youtu.be/70DQ4YlQMMw)
 
 [__See the NuttX Log__](https://gist.github.com/lupyuen/901365650d8f908a7caa431de4e84ff6)
+
+# Disable the SMP
+
+PThreads won't work correctly with SMP, since we're running on One Single Core.
+
+After disabling SMP: OSTest completes successfully yay!
+
+[__Watch the Demo on YouTube__](https://youtu.be/Yr7aYNIMUsw)
+
+[__See the NuttX Log__](https://gist.github.com/lupyuen/2823528f7b53375f080256bc798b2bf5)
+
+![TODO](https://lupyuen.org/images/starpro64-ostest.png)
