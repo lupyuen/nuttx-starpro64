@@ -278,3 +278,35 @@ After disabling SMP: OSTest completes successfully yay!
 [__See the NuttX Log__](https://gist.github.com/lupyuen/2823528f7b53375f080256bc798b2bf5)
 
 ![TODO](https://lupyuen.org/images/starpro64-ostest.png)
+
+# StarPro64 is (Literally) Hot!
+
+![TODO](https://lupyuen.org/images/starpro64-fan.jpg)
+
+_Something is smelling like barbecue?_
+
+Whoa StarPro64 is on fire: Drop it, stop it and __power off__! StarPro64 will show [__PLL Errors__](https://gist.github.com/lupyuen/47170b4c4d7117ac495c5faede48280b#file-gistfile1-txt-L796-L894) when it overheats...
+
+```bash
+pll failed.
+pll failed.
+pll failed.
+```
+
+Also watch for [__Thermal Errors__](https://gist.github.com/lupyuen/89e1e87e7f213b6f52f31987f254b32f#file-gistfile1-txt-L1940-L1947) when booting Linux...
+
+```bash
+thermal thermal_zone0: thermal0:
+critical temperature reached, shutting down
+reboot: HARDWARE PROTECTION shutdown (Temperature too high)
+```
+
+Install a [__USB Fan__](https://www.lazada.sg/products/i2932991583-s20178422377.html). But don't power it with USB Port on StarPro64! (Pic above)
+
+_Anything else we should worry about?_
+
+The [__MicroSD Interface__](TODO) wasn't working well on our Prototype StarPro64. The MicroSD Card deactivated itself after a bit of U-Boot Access.
+
+Hence the __Headless Ironman__: USB Drive on StarPro64...
+
+![TODO](https://lupyuen.org/images/starpro64-ironman.jpg)
