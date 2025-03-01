@@ -2,7 +2,11 @@
 
 # Apache NuttX RTOS on StarPro64 RISC-V SBC (ESWIN EIC7700X)
 
-[__Watch the Demo on YouTube__](https://youtu.be/Yr7aYNIMUsw)
+Read the article...
+
+- ["StarPro64 EIC7700X RISC-V SBC: Maybe LLM on NPU on NuttX?"](https://lupyuen.org/articles/starpro64.html)
+
+- [Watch the Demo on YouTube](https://youtu.be/Yr7aYNIMUsw)
 
 Work in progress...
 
