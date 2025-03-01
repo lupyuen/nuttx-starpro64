@@ -310,3 +310,42 @@ The [__MicroSD Interface__](TODO) wasn't working well on our Prototype StarPro64
 Hence the __Headless Ironman__: USB Drive on StarPro64...
 
 ![TODO](https://lupyuen.org/images/starpro64-ironman.jpg)
+
+# Auto-Boot and Static IP for StarPro64
+
+_How to undo Auto-Boot for StarPro64?_
+
+Earlier we did this...
+
+```bash
+## Remember the Original Boot Command: `bootflow scan -lb`
+setenv orig_bootcmd "$bootcmd"
+
+## Prepend TFTP to the Boot Command: `run bootcmd_tftp ; bootflow scan -lb`
+setenv bootcmd "run bootcmd_tftp ; $bootcmd"
+
+## Save it for future reboots
+saveenv
+```
+
+To undo the changes: Press Ctrl-C when U-Boot boots. Enter these commands...
+
+```bash
+## Will show the Original Boot Command: `bootflow scan -lb`
+printenv orig_bootcmd
+
+## Restore the Boot Command
+setenv bootcmd $orig_bootcmd
+
+## Will show the Restored Boot Command: `bootflow scan -lb`
+printenv bootcmd
+
+## Save it for future reboots
+saveenv
+```
+
+_How to use a Static IP with Auto-Boot?_
+
+See this...
+
+-  https://github.com/lupyuen/nuttx-sg2000/issues/1
